@@ -1,0 +1,40 @@
+/* ヘッダー */
+body {
+	
+}
+
+.header {
+	background-color: #fffeee;
+	height: 100%;
+	height: 80px;
+	padding: 0 30px;
+}
+
+
+.header-btns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-logo a {
+	color: #0db;
+	text-decoration: none;
+	font-size: 30px;
+	display: block;
+	padding: 20px;
+}
+
+.header-logo a:hover {
+	color: #f37053;
+}
+
+.header-btn {
+	color: #0db;
+	line-height: 80px;
+	background-color: #0db;
+	display: block;
+}
+
+.header-btn:hover {
+	background-color: #f37053;
+}
