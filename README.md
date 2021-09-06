@@ -13,7 +13,8 @@
 
 - has_many :plans
 - has_many :faces
-- has_many :tweets
+- has_many :user_rooms
+- has_many :rooms, through: :user_rooms
 
 ## plans テーブル
 
@@ -41,19 +42,38 @@
 ### Association
 
 - belongs_to :user
-- has_many :plans
-- has_many :tweets
+- has_many   :plans
 
 ## tweets テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| name   | string     | null: false                    |
 | text   | string     | null: false                    |
 | user   | references | null: false, foreign_key: true |
-| face   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :face
+- belongs_to :room
+
+## rooms テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| name   | string     | null: false                    |
+
+### Association
+
+- has_many :user_rooms
+- has_many :user, through: :user_rooms
+
+## user_rooms テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+- belongs_to :user
+- belongs_to :room
