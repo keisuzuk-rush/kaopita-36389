@@ -1,0 +1,165 @@
+.wrapper {
+	display: flex;
+}
+
+.side-bar {
+	background-color: #0db;
+	width: 300px;
+	height: calc(100vh - 80px);
+}
+
+.side-bar-header {
+	height: 100px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.user-name a {
+	color: #fafafa;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.chat-create a {
+	border: 1px solid lightblue;
+	padding: 14px;
+	color: #fffeee;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+.rooms {
+	background-color: #fffeee;
+	height: calc(100vh - 100px - 80px);
+	padding: 0 20px;
+	overflow: scroll;
+}
+
+.room {
+	padding: 20px 0 40px;
+}
+
+.room-name {
+	color: #0db;
+}
+
+.room-name a {
+	text-decoration: none;
+	color: #0db;
+}
+
+.room-name a:hover {
+	color: #f37053;
+}
+
+.main-chat {
+	background-color: #ffffff;
+	width: calc(100vw - 300px);
+}
+
+.chat-header {
+	height: 100px;
+	background-color: #ffffff;
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.chat-end a{
+	border: 1px solid #0db;
+	padding: 14px;
+	font-size: 10px;
+	color: #0db;
+	text-decoration: none;
+}
+
+.tweets {
+	height: calc(100vh - 100px - 90px - 80px);
+	background-color: #fafafa;
+	padding: 46px 40px 0;
+	overflow: scroll;
+}
+
+.tweet {
+	margin: 10px 0 0 0;
+}
+
+.upper-tweet {
+	display: flex;
+}
+
+.tweeter-name {
+	font-size: 16px;
+	color: #434a54;
+}
+
+.tweet-date {
+	font-size: 12px;
+	color: #999;
+	padding-left: 10px;
+}
+
+.lower-tweet {
+	margin-top: 10px;
+}
+
+.tweet-comment {
+	font-size: 14px;
+	color: #434a54;
+	margin-bottom: 40px;
+}
+
+.form {
+	height: 90px;
+	background-color: #dddddd;
+	padding: 20px 40px;
+	display: flex;
+}
+
+.form-input {
+	background-color: white;
+	width: 100%;
+	display: flex;
+}
+
+.form-tweet {
+	border: none;
+	height: 50px;
+	width: 100%;
+	padding-left: 10px;
+}
+
+.form-submit {
+	background-color: #0db;
+	border: none;
+	color: white;
+	font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-submit:hover {
+	background-color: #f37053;
+}
+
+.form-image {
+	font-size: 12px;
+	background-color: #0db;
+	color: white;
+	padding: 12px;
+	width: 60px;
+	margin: 5px 10px;
+	text-align: center;
+}
+
+.form-image:hover {
+	background-color: #f37053;
+}
+
+.hidden {
+	display: none;
+}
