@@ -9,4 +9,7 @@ class User < ApplicationRecord
     validates :company_number, format: { with: /\A[0-9]{8}+\z/.freeze }
   end
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
+
+	has_many :user_rooms
+	has_many :rooms, through: :user_rooms
 end
