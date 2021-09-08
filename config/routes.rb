@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root to: "plans#index"
 
 	resources :plans, only: :index
-	resources :rooms, only: [:new, :create]
+	resources :rooms, only: [:index, :new, :create]
 end
