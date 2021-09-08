@@ -30,6 +30,11 @@
 	text-decoration: none;
 }
 
+.chat-create a:hover {
+	background-color: #fffeee;
+	color: #0db;
+}
+
 .rooms {
 	background-color: #fffeee;
 	height: calc(100vh - 100px - 80px);
