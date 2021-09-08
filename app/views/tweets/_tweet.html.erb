@@ -14,5 +14,6 @@
       <!-- 投稿したメッセージ内容を記述する -->
 			<%= tweet.text %>
     </div>
+		<%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
   </div>
 </div>
