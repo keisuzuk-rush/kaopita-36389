@@ -8,29 +8,12 @@
 </div>
 
 <div class="tweets">
-	<div class="tweet">
-		<div class="upper-tweet">
-			<div class="tweeter-name">Tom</div>
-			<div class="tweet-date">2020/3/31 12:43:30</div>
-		</div>
-		<div class="lower-tweet">
-			<div class="tweet-comment">おはよう</div>
-		</div>
-	</div>
-	<div class="tweet">
-		<div class="upper-tweet">
-			<div class="tweeter-name">Tom</div>
-			<div class="tweet-date">2020/3/31 12:43:30</div>
-		</div>
-		<div class="lower-tweet">
-			<div class="tweet-comment">おはよう</div>
-		</div>
-	</div>
+	<%= render partial: 'tweet', collection: @tweets %>
 </div>
 
 <%= form_with model: [@room, @tweet], class: 'form', local: true do |f| %>
   <div class="form-input">
-    <%= f.text_field :content, class: 'form-tweet', placeholder: 'type a tweet' %>
+    <%= f.text_field :text, class: 'form-tweet', placeholder: 'type a tweet' %>
     <label class="form-image">
       <span class="image-file">画像</span>
       <%= f.file_field :image, class: 'hidden' %>

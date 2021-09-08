@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   def index
 		@tweet = Tweet.new
 		@room = Room.find(params[:room_id])
+		@tweets = @room.tweets.includes(:user)
   end
 
 	def create
@@ -10,6 +11,7 @@ class TweetsController < ApplicationController
 		if @tweet.save
 			redirect_to room_tweets_path(@room)
 		else
+			@tweets = @room.tweets.includes(:user)
 			render :index
 		end
 	end
