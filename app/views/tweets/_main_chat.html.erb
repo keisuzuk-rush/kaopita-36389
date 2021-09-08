@@ -1,40 +1,23 @@
 <div class="chat-header">
 	<div class="room-name">
-		hogefuga
+		<%= @room.name %>
 	</div>
 	<div class="chat-end">
-		<a href="#">チャットを終了する</a>
+		<%= link_to "チャットを終了する", room_path(@room), method: :delete %>
 	</div>
 </div>
 
 <div class="tweets">
-	<div class="tweet">
-		<div class="upper-tweet">
-			<div class="tweeter-name">Tom</div>
-			<div class="tweet-date">2020/3/31 12:43:30</div>
-		</div>
-		<div class="lower-tweet">
-			<div class="tweet-comment">おはよう</div>
-		</div>
-	</div>
-	<div class="tweet">
-		<div class="upper-tweet">
-			<div class="tweeter-name">Tom</div>
-			<div class="tweet-date">2020/3/31 12:43:30</div>
-		</div>
-		<div class="lower-tweet">
-			<div class="tweet-comment">おはよう</div>
-		</div>
-	</div>
+	<%= render partial: 'tweet', collection: @tweets %>
 </div>
 
-<div class="form">
-	<div class="form-input">
-    <input class="form-tweet" placeholder= "type a tweet">
-		<label class="form-image">
+<%= form_with model: [@room, @tweet], class: 'form', local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :text, class: 'form-tweet', placeholder: 'type a tweet' %>
+    <label class="form-image">
       <span class="image-file">画像</span>
-      <input type="file" class="hidden">
+      <%= f.file_field :image, class: 'hidden' %>
     </label>
   </div>
-  <input class="form-submit" type="submit" value="送信">
-</div>
+  <%= f.submit '送信', class: 'form-submit' %>
+<% end %>
