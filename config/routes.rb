@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+	devise_for :users
   get 'tweets/index'
-  devise_for :users
+  
   root to: "plans#index"
 
 	resources :plans, only: :index
-	resources :rooms, only: [:new, :create]
+	resources :rooms, only: [:index, :new, :create]
 end

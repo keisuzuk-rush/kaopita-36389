@@ -13,8 +13,8 @@
 
 - has_many :plans
 - has_many :faces
-- has_many :user_rooms
-- has_many :rooms, through: :user_rooms
+- has_many :room_users
+- has_many :rooms, through: :room_users
 
 ## plans テーブル
 
@@ -65,10 +65,10 @@
 
 ### Association
 
-- has_many :user_rooms
-- has_many :user, through: :user_rooms
+- has_many :room_users
+- has_many :user, through: :room_users
 
-## user_rooms テーブル
+## room_users テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
