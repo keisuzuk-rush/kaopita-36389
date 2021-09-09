@@ -1,0 +1,9 @@
+.main-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.icon-face {
+	margin: 20px;
+}
