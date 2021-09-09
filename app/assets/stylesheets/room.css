@@ -25,6 +25,8 @@ li {
 
 .wrapper {
 	width: 100%;
+	position: absolute;
+	top: 80px;
 }
 
 .chat-room-form {
