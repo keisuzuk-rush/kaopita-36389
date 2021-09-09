@@ -138,10 +138,21 @@ h1 {
 	.side-bar {
 		width: 35%;
 	}
+
+	.icons {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 
 @media(max-width: 670px) {
+
+	.icons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
 	.chat-room-form {
 		border-style: none;

@@ -41,12 +41,12 @@ body {
 
 .main-wrapper {
 	height: 800px;
+	padding: 20px 60px;
 }
 
 .icons {
 	display: flex;
-	flex-wrap: wrap;
-
+	justify-content: space-between;
 }
 
 .icon {
