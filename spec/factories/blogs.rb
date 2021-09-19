@@ -1,4 +1,4 @@
 FactoryBot.define do
-  factory :face do
+  factory :blog do
   end
 end

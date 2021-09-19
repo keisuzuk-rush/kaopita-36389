@@ -13,5 +13,6 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
   has_many :tweets
-	has_many :faces
+  has_many :faces
+  has_many :blogs
 end

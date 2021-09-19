@@ -1,3 +1,9 @@
+.title-kao {
+	font-weight: bold;
+	color: #f37053;
+	padding-top: 50px;
+}
+
 .main-wrapper {
 	display: flex;
 	justify-content: center;
