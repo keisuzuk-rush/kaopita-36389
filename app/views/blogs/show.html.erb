@@ -1,18 +1,26 @@
 <p id="notice"><%= notice %></p>
 <div class="show">
+	<h1 class="top">カレンダー（詳細）</h1>
+	<br>
 	<p>
-		<strong>タイトル</strong>
-		<%= @blog.title %>
+		<div class="title">
+			<strong>＜タイトル＞</strong><br>
+			<%= @blog.title %>
+		</div>
 	</p>
 
 	<p>
-		<strong>内容</strong>
-		<%= @blog.content %>
+		<div class="content">
+			<strong>＜内容＞</strong><br>
+			<%= @blog.content %>
+		</div>
 	</p>
 
 	<p>
-		<strong>日時</strong>
-		<%= @blog.start_time.strftime("%m-%d") %>
+		<div class="time">
+			<strong>＜日時＞</strong><br>
+			<%= @blog.start_time.strftime("%m月%d日") %>
+		</div>
 	</p>
 
 	<%= link_to '編集', edit_blog_path(@blog) %>
