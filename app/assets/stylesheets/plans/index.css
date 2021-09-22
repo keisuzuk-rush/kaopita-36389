@@ -18,18 +18,22 @@
 }
 
 .header-logo a:hover {
-	color: #f37053;
+	color: orange;
 }
 
 .header-btn {
-	color: #0db;
+	color: #fff;
+	width: 100px;
 	line-height: 80px;
 	background-color: #0db;
 	display: block;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
 }
 
 .header-btn:hover {
-	background-color: #f37053;
+	background-color: orange;
 }
 
 .icons {

@@ -1,0 +1,83 @@
+<div class="faces-contents">
+  <div class="faces-main">
+    <h2 class="faces-title">カオの情報を入力</h2>
+    <%= form_with model: @face, local: true do |f| %>
+
+    <%# カオ画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        カオの画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"faces-image" %>
+      </div>
+    </div>
+    <%# /カオ画像 %>
+    <%# 自己紹介 %>
+    <div class="new-faces">
+			<div class="faces-explain">
+        <div class="weight-bold-text">
+          自己紹介
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :text, class:"faces-text", id:"face-info", placeholder:"自己紹介（必須 500文字まで）" ,rows:"6" ,maxlength:"500" %>
+      </div>
+			<div class="faces-explain">
+				<div class="weight-bold-text">
+					スキル
+					<span class="indispensable">必須</span>
+				</div>
+				<%= f.text_area :text, class:"faces-text", id:"face-text", placeholder:"スキル（必須 100文字まで)", maxlength:"100" %>
+			</div>
+      <div class="faces-explain">
+        <div class="weight-bold-text">
+          趣味
+					<span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :text, class:"faces-text", id:"face-info", placeholder:"趣味（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /自己紹介 %>
+
+    <%# カオの詳細 %>
+    <div class="faces-detail">
+      <div class="weight-bold-text">カオの詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          性別
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"face-gender"}) %>
+        <div class="weight-bold-text">
+          出身地
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:birthplace_id, Birthplace.all, :id, :name, {}, {class:"select-box", id:"face-department"}) %>
+				<div class="weight-bold-text">
+          部署
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:department_id, Department.all, :id, :name, {}, {class:"select-box", id:"face-department"}) %>
+				<div class="weight-bold-text">
+					勤続年数
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:history_id, History.all, :id, :name, {}, {class:"select-box", id:"face-department"}) %>
+      </div>
+    </div>
+    <%# /カオの詳細 %>
+
+    <%# 下部ボタン %>
+    <div class="register-btn-contents">
+      <%= f.submit "登録する" ,class:"register-btn" %>
+      <%=link_to 'もどる', faces_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>
