@@ -1,4 +1,20 @@
 <h1 class="title-kao">カオで選ぶ</h1>
+<%= link_to "カオを追加する", new_face_path, class:"post" %>
+
+<% @faces.each do |face| %>
+  <div class="face">
+    <div class="face-text">
+      <%= face.text %>
+    </div>
+    <div class="face-skill">
+      <%= face.skill %>
+    </div>
+    <div class="face-hobby">
+      <%= face.hobby %>
+    </div>
+  </div>
+<% end %>
+
 <div class="main-wrapper">
 	<div class="icon-face">
 		<img src="https://2.bp.blogspot.com/-mAPlMWTEu6w/Vf-avVV_qWI/AAAAAAAAyKQ/fFlCoLI8v0g/s800/icon_business_woman06.png" width="220px" height="200px" >
@@ -36,5 +52,9 @@
 		<img src="https://4.bp.blogspot.com/-07Fj2RvHvNw/Vf-am2wUVEI/AAAAAAAAyH4/wniywd4OwXM/s800/icon_business_man03.png" width="220px" height="200px" >
 		<p>名前９</p>
 	</div>
+	<%= link_to(new_face_path, class: 'face-btn') do %>
+		<span class='face-btn-text'>カオを追加</span>
+		<%= image_tag 'https://1.bp.blogspot.com/-1DEjTTe66zg/WGCffbZpkRI/AAAAAAABAos/OgHE3v13Jccwenmb_uhQGuy-K74f7qo4gCLcB/s800/camera_man_boy.png' , size: '185x50' ,class: "face-btn-icon" %>
+	<% end %>
 	
 </div>

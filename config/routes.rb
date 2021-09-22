@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 	resources :rooms, only: [:index, :new, :create, :destroy] do
 		resources :tweets, only: [:index, :create]
 	end
-	resources :faces, only: :index
+	resources :faces, only: [:index, :new, :create, :show]
 	resources :blogs
 end

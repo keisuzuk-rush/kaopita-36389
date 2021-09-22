@@ -1,0 +1,74 @@
+.face-btn {
+	width: 130px;
+	background-color: #0db;
+	border: 4px solid #0db;
+	text-align: center;
+	border-radius: 50%;
+	top: 92px;
+	right: 32px;
+	position: fixed;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.face-btn-icon {
+	width: 40%;
+}
+
+.face-btn-text {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.post {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  border: 1px solid white;
+	border-radius: 25px;
+  background-color: #0db;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.post:hover {
+	background-color: orange;
+}
+
+.face {
+  height:200px;
+  background-color:lightgray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #fff;
+  padding: 20px;
+}
+
+.face-text {
+  font-size: 16px;
+  border: 1px solid;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.face-skill {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.face-hobby {
+  font-size: 20px;
+  font-weight: bold;
+}
